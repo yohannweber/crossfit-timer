@@ -1,101 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#000000">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/iv_prefix1"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_d" />
-
-        <ImageView
-            android:id="@+id/iv_prefix2"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_prefix1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_n" />
-
-
-        <ImageView
-            android:id="@+id/iv_first"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_prefix2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_eigth" />
-
-        <ImageView
-            android:id="@+id/iv_second"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_first"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_eigth" />
-
-        <ImageView
-            android:id="@+id/iv_points"
-            android:layout_width="48dp"
-            android:layout_height="141dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_second"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_point" />
-
-
-        <ImageView
-            android:id="@+id/iv_third"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_points"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_eigth" />
-
-        <ImageView
-            android:id="@+id/iv_fourth"
-            android:layout_width="108dp"
-            android:layout_height="191dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_third"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_eigth" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+    <fragment android:name="com.yweber.crossfittimer.Timer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/constraintLayout">
-
-        <Button
-            android:id="@+id/timerButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/flay_timer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

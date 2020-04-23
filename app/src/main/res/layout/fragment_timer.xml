@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#000000">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_hour1"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_d" />
+
+        <ImageView
+            android:id="@+id/iv_hour2"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_hour1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_n" />
+
+        <ImageView
+            android:id="@+id/iv_doublePoint1"
+            android:layout_width="48dp"
+            android:layout_height="141dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_hour2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_point_" />
+
+        <ImageView
+            android:id="@+id/iv_minute1"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_doublePoint1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_eigth" />
+
+        <ImageView
+            android:id="@+id/iv_minute2"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_minute1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_eigth" />
+
+        <ImageView
+            android:id="@+id/iv_doublePoints2"
+            android:layout_width="48dp"
+            android:layout_height="141dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_minute2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_point" />
+
+
+        <ImageView
+            android:id="@+id/iv_second1"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_doublePoints2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_eigth" />
+
+        <ImageView
+            android:id="@+id/iv_second2"
+            android:layout_width="108dp"
+            android:layout_height="191dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_second1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_eigth" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraintLayout">
+
+        <Button
+            android:id="@+id/timerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
