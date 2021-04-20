@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.yweber.crossfittimer.timer.CountDownTimer
 import com.yweber.crossfittimer.timer.CountUpTimer
+import com.yweber.crossfittimer.timer.EMOMTimer
 import com.yweber.crossfittimer.ui.UITimer
 import kotlinx.android.synthetic.main.fragment_timer.*
 
@@ -18,7 +19,8 @@ import kotlinx.android.synthetic.main.fragment_timer.*
  */
 class Timer : Fragment() {
 
-    lateinit var countDownTimer : CountDownTimer
+    //lateinit var countDownTimer : CountDownTimer
+    lateinit var countDownTimer : EMOMTimer
     lateinit var uiTimer: UITimer
     var timerIsRunning : Boolean = false
 
@@ -50,15 +52,14 @@ class Timer : Fragment() {
             uiTimer = UITimer(activityFragment.baseContext,
                 arrayOf(iv_hour1, iv_hour2, iv_doublePoint1, iv_minute1, iv_minute2, iv_doublePoints2, iv_second1, iv_second2))
 
-            countDownTimer = CountDownTimer(
-                61_000,
+            countDownTimer = EMOMTimer(3,
                 uiTimer
             )
             timerButton.setOnClickListener {
                 if (!timerIsRunning)
                     countDownTimer.start()
                 else
-                    countDownTimer.cancel()
+                    countDownTimer.pause()
 
                 timerIsRunning = !timerIsRunning
 

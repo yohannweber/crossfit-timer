@@ -1,20 +1,19 @@
 package com.yweber.crossfittimer.timer
 
-import android.content.Context
-import android.graphics.drawable.Drawable
 import android.os.CountDownTimer
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import com.yweber.crossfittimer.ui.UITimer
-import kotlin.math.min
 
-class CountUpTimer(val millisInFuture: Long = 60_000, private val uiTimer: UITimer) : CountDownTimer(millisInFuture, 500) {
+class CountUpTimer(val millisInFuture: Long = 10_000, private val uiTimer: UITimer) : CountDownTimer(millisInFuture, 500) {
+
+    var timeRemaining : Long = 0
+    val onFinished = mutableListOf<(Long) -> Unit>()
 
     override fun onFinish() {
+        onFinished.forEach{it(timeRemaining)}
     }
 
     override fun onTick(millisUntilFinished: Long) {
+        timeRemaining = millisUntilFinished
         updateTimer(millisUntilFinished)
     }
 
